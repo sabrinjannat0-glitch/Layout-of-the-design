@@ -1,1 +1,1 @@
-https://sabrinjannat0-glitch.glitch.io/Layout-of-the-design/
+https://sabrinjannat0-glitch.github.io/Layout-of-the-design/
