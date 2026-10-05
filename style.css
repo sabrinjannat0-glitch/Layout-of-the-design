@@ -1,0 +1,299 @@
+/* 1. Global Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+body {
+  background-color: #EFF6FF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2A4A5C;
+}
+
+/* 2. Outer Container Card */
+.card-container {
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.hero-section {
+  width: 45%;
+  background: url('img/bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.hero-section .logo img {
+  width: 80px;
+  height: auto;
+}
+
+.hero-content {
+  margin-top: auto;
+}
+
+.hero-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
+  color: #ffffff;
+}
+/* 4. Right Form Section */
+.form-section {
+  width: 55%;
+  padding: 40px;
+}
+
+.form-header h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #1d506b;
+  margin-bottom: 6px;
+}
+
+.form-header p {
+  font-size: 13px;
+  color: #8499a4;
+  margin-bottom: 24px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-facebook {
+  background-color: #255A9B;
+}
+
+.btn-linkedin {
+  background-color: #0076B6;
+}
+
+/* Divider Line */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 50px ;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #EEEEEE;
+  z-index: 1;
+}
+
+.divider span {
+  position: relative;
+  background-color: #ffffff;
+  padding: 0 12px;
+  color: #AFAFAF;
+  font-size: 12px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* Inputs (Email & Phone side-by-side) */
+.input-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7B8A92;
+  margin-bottom: 6px;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid #EEEEEE;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #2A4A5C;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+  border-color: #3698FB;
+}
+/* Investor Type Options */
+.investor-type-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2A4A5C;
+  margin-bottom: 4px;
+}
+
+.investor-type-section .subtitle {
+  font-size: 12px;
+  color: #7B8A92;
+  margin-bottom: 16px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* 1. Hide the default browser radio button */
+.radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* 2. Style the text and make room for the custom circle */
+.radio-option span {
+  position: relative;
+  padding-left: 24px; /* Space for the circle */
+  font-size: 14px;
+  color: #2A4A5C;
+  font-weight: 500;
+}
+
+/* 3. Create the custom empty circle (Unchecked state) */
+.radio-option span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border: 1px solid #C4D1D8;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+/* 4. Create the custom filled circle (Checked state) */
+.radio-option input[type="radio"]:checked + span::before {
+  border: 4px solid #3698FB; /* Creates the blue outer ring and solid center look */
+  background-color: #ffffff;
+}
+
+
+
+
+.investor-description {
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Creates the subtle shadow effect */
+  padding: 14px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #7B8A92; /* Light ash gray text */
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Terms Checkbox */
+.terms-option {
+  font-size: 12px;
+  color: #7B8A92;
+  margin-bottom: 24px;
+}
+
+.terms-option input {
+  margin-right: 6px;
+  accent-color: #3698FB;
+}
+
+.terms-option a {
+  color: #3698FB;
+  text-decoration: none;
+}
+
+.terms-option a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #3698FB;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #255A9B;
+}
